@@ -16,13 +16,18 @@ export default createGlobalStyle`
         padding: 0;
     }
 
-
-    .loader-ui-1 {
-        width: 10px;
-        height: 10px;
-        margin: 40px auto;
-        border-radius: 50%;
-        background: ${props => props.theme.colors.primary};
+    .App {
+        position: fixed;
+        width: 100px;
+        height: 400px;
+        justify-content: center;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%,-50%);
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
     }
-
 `;

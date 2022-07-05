@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { MotionStyle } from "framer-motion";
 
 export const Variants = {
     animationOne: {
@@ -28,17 +28,6 @@ export const Variants = {
             }
         }
     },
-    animationThree: {
-        y: 0,
-        x: [0, -40],
-        transition: {
-            x: {
-                yoyo: Infinity,
-                duration: 0.25,
-                ease: 'easeOut'
-            }
-        }
-    },
     exit: {
         x: '-100vw',
         opacity: 0
@@ -48,7 +37,7 @@ export const Variants = {
 
 export const Loader = styled.div`
     width: 100%;
-    height: 300px;
+    height: 200px;
     justify-content: center;
     align-content: center;
     text-align: center; 
@@ -57,24 +46,33 @@ export const Loader = styled.div`
   
 `;
 
-export const ButtonCycle = styled.button`
-    margin: 30px 0;
-    position: fixed;
-    left: 50%;
-    padding: 10px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    font-size: 14px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background: ${props =>  props.theme.colors.fourth};
-    color: #fff;
-    &:hover {
-        transform: scale(0.9);
-    }
+export const ItemLoader:MotionStyle = {
+    width: "1rem",
+    height: "1rem",
+    borderRadius: "0.5rem",
+    background: "#BD34FE"
+}
+
+export const NextButton= styled.a`
+margin: 80px 0;
+position: fixed;
+padding: 10px;
+margin-left: -10px;
+font-weight: bold;
+text-transform: uppercase;
+text-align: center;
+text-decoration: none;
+display: block;
+font-size: 14px;
+cursor: pointer;
+border: none;
+border-radius: 4px;
+background: ${props =>  props.theme.colors.fourth};
+color: #fff;
+&:hover {
+    transform: scale(0.9);
+}
 `;
+
+
 
